@@ -20,16 +20,19 @@ Works without any build steps.
 Make the file input button work:
 
 ```html
+<!-- Add @change handler to file input -->
 <input type="file" @change="handleFileInput"/>
 ```
 
 ```js
+// Add your cloud name & preset
 mod.data = {
-  cloudName: 'anymod-demo', // Add your cloud name
-  uploadPreset: 'dfolqlzl', // Add your upload preset
+  cloudName: 'anymod-demo',
+  uploadPreset: 'dfolqlzl',
   cardImage: 'https://res.cloudinary.com/component/image/upload/v1528847502/upload-arrow.png',
 }
 
+// Add handleFileInput & uploadFile
 // Using ES6 syntax
 mod.methods = {
   handleFileInput (e) {
@@ -63,6 +66,7 @@ Now uploading works by clicking on the file upload input.
 Make drag & drop look nice
 
 ```html
+<!-- Add :class for styling and @drag functions -->
 <form class="card"
   :class="{ highlight: highlight }"
   @dragenter.prevent="setHighlight(true)"
@@ -81,11 +85,12 @@ Make drag & drop look nice
 ```
 
 ```js
+// Add highlight variable
 mod.data = {
   cloudName: 'anymod-demo',
   uploadPreset: 'dfolqlzl',
   cardImage: 'https://res.cloudinary.com/component/image/upload/v1528847502/upload-arrow.png',
-  highlight: false // Add highlight variable
+  highlight: false
 }
 ```
 
@@ -133,7 +138,7 @@ input[type="file"] {
 ```html
 <!-- Add @click function called clickFileInput -->
 <form class="card"
-	:class="{ highlight: highlight }"
+  :class="{ highlight: highlight }"
   @dragenter.prevent="setHighlight(true)"
   @dragover.prevent="setHighlight(true)"
   @dragleave.prevent="setHighlight(false)"
