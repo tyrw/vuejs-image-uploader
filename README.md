@@ -157,7 +157,9 @@ clickFileInput () {
 
 ### Add anywhere
 
-Your file upload mod is working; now you can add it to any web page and it'll work!.
+Your file upload mod is working; now you can add it to any web page and it'll work!
+
+[Example jsfiddle](http://jsfiddle.net/component/ks941hzv/)
 
 ```html
 <div id="anymod-anabo"></div>
