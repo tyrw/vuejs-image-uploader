@@ -1,0 +1,20 @@
+<form class="card"
+	:class="{ highlight: highlight }"
+	@click="clickFileInput"
+	@dragenter.prevent="setHighlight(true)"
+	@dragover.prevent="setHighlight(true)"
+	@dragleave.prevent="setHighlight(false)"
+	@dragend.prevent="setHighlight(false)"
+	@drop.prevent="handleFileDrop">
+	<div class="card-image">
+		<img :src="cardImage">
+		<span class="btn-floating btn-large halfway-fab red">
+			<i class="material-icons">add</i>
+		</span>
+	</div>
+	<div class="card-content">
+		<span class="card-title">Upload</span>
+		<p>Click or drag to upload an image.</p>
+		<input type="file" ref="fileInput" @change="handleFileInput"/>
+	</div>
+</form>

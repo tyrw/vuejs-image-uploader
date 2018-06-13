@@ -1,0 +1,12 @@
+max-width: 300px;
+margin: 0 auto;
+
+.highlight,
+.card:hover {
+	cursor: pointer;
+	box-shadow: 0 3px 30px red;
+}
+
+input[type="file"] {
+	display: none;	
+}
